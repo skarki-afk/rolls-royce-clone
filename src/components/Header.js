@@ -28,11 +28,14 @@ const Nav = styled.div`
     align-items: center;
     padding: 18px 0;
     text-transform: uppercase;
-    border-bottom: 0.5px solid black;
+    border-bottom: 0.5px solid #fff;
     margin: 10px 17px;
     position: relative;
     font-weight:600;
+    position: fixed;
     font-size: 0.9rem;
+    z-index: 1;
+    color: white;
 `
 
 const BurgerMenu = styled(MenuIcon)`
@@ -50,7 +53,6 @@ const Logo =styled.div`
 const RightMenu = styled.div`
     display: flex;
     cursor: pointer;
-   
 `
 
 const Search = styled(SearchIcon)`
