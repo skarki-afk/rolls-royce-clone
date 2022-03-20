@@ -19,13 +19,15 @@ const Header =(props)=>{
     return ( 
     <Nav>
         <div className={scroll? "active":"nav"}>
-        <Menu>
-            <BurgerMenu onClick={props.toggle}/>Menu
+        <Menu onClick={props.toggle}>
+            <BurgerMenu />Menu
         </Menu>
         <Logo>
             <img width={scroll? "40px" : "105px"} alt="rolls-royce" src={scroll? "./img/brandlogo.png" : "./img/Rolls-Royce-RR.png"}/>
         </Logo>
-        <RightMenu className="right-menu">
+        <RightMenu 
+        onClick={props.toggleDeal}
+        className="right-menu">
            <Search className="search"/> Find a dealer
         </RightMenu>
         </div>

@@ -73,7 +73,7 @@ const Section = styled.div`
     align-items:center;
     padding: 45px;
     text-transform: uppercase;
-    overflow-y: none;
+    
 `
 const Main = styled.div`
     margin: 95px 0 0 0;
