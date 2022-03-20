@@ -73,7 +73,7 @@ const Section = styled.div`
     align-items:center;
     padding: 45px;
     text-transform: uppercase;
-    overflow-y: none;
+    
 `
 const Main = styled.div`
     margin: 95px 0 0 0;
@@ -104,6 +104,10 @@ const Button = styled.div`
         border: none;
         box-sizing: border-box;
         text-align: center;
+        background-color: #FFF;
+    }
+    button:hover{
+        background-color: #e7e3e3;
     }
 `
 const RightArrow = styled(ArrowRightAltIcon)`

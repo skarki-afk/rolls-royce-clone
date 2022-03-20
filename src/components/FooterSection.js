@@ -27,6 +27,9 @@ const Modal =styled.div`
     color: #fff;
     margin-left:45px;
     padding-top:45px;
+    &:hover{
+        color: #e7e3e3;
+    }
     .modal{
         width:370px;
         margin-right:25px;

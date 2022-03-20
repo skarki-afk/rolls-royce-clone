@@ -3,7 +3,7 @@ import styled from "styled-components"
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 
-const Header =()=>{
+const Header =(props)=>{
     const [scroll,setScroll] = useState(false)
     const scrollChange =()=>{
         if(window.scrollY >= 75){
@@ -19,13 +19,15 @@ const Header =()=>{
     return ( 
     <Nav>
         <div className={scroll? "active":"nav"}>
-        <Menu>
-            <BurgerMenu/>Menu
+        <Menu onClick={props.toggle}>
+            <BurgerMenu />Menu
         </Menu>
         <Logo>
             <img width={scroll? "40px" : "105px"} alt="rolls-royce" src={scroll? "./img/brandlogo.png" : "./img/Rolls-Royce-RR.png"}/>
         </Logo>
-        <RightMenu className="right-menu">
+        <RightMenu 
+        onClick={props.toggleDeal}
+        className="right-menu">
            <Search className="search"/> Find a dealer
         </RightMenu>
         </div>
@@ -36,6 +38,7 @@ const Header =()=>{
 export default Header
 
 const Nav = styled.div`
+    z-index: 1;
     .active {
         height: 55px;
         width: 98vw;
@@ -78,6 +81,9 @@ const Menu = styled.div`
  display: flex;
  align-items: center;
  cursor: pointer;
+ &:hover{
+    color:#e7e3e3;
+}
 `
 const Logo =styled.div`
     cursor: pointer;
@@ -86,6 +92,9 @@ const Logo =styled.div`
 const RightMenu = styled.div`
     display: flex;
     cursor: pointer;
+    &:hover{
+        color:#e7e3e3;
+    }
 `
 
 const Search = styled(SearchIcon)`
