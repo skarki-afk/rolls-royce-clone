@@ -104,6 +104,10 @@ const Button = styled.div`
         border: none;
         box-sizing: border-box;
         text-align: center;
+        background-color: #FFF;
+    }
+    button:hover{
+        background-color: #e7e3e3;
     }
 `
 const RightArrow = styled(ArrowRightAltIcon)`

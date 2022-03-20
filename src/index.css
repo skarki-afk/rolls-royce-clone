@@ -60,4 +60,8 @@ code {
   border: none;
   box-sizing: border-box;
   text-align: center;
+  background-color: #fff;
+}
+.btn:hover {
+  background-color: #e7e3e3;
 }

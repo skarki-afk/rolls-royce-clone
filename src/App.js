@@ -7,6 +7,7 @@ import dataFooter from "./data/dataFooter"
 import FooterSection from './components/FooterSection';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import styled from "styled-components"
+import Sidebar from './components/Sidebar';
 
 
 
@@ -14,6 +15,10 @@ import styled from "styled-components"
 function App() {
   
   const [btn,setBtn] = useState(false)
+  const [menuOpen,setMenuOpen] = useState(false)
+  const toggleBtn =()=>{
+    setMenuOpen(prevMenuOpen=> !prevMenuOpen);
+  }
   const showArrow =()=>{
     setBtn(prevBtn => !prevBtn)
 }
@@ -32,6 +37,7 @@ function App() {
       />
     )
   })
+  // console.log(menuOpen)
   const footerElements = dataFooter.map(items=> {
     return( 
       <FooterSection
@@ -46,7 +52,9 @@ function App() {
   
   return (
     <div>
-      <Header />
+      <Header 
+        toggle ={toggleBtn}
+      />
       {bodyElements }
       <Footer/>
       <div className='footer-list'>
@@ -57,6 +65,10 @@ function App() {
         onMouseEnter={showArrow} 
         onMouseLeave={showArrow}className='btn'>inspiring greatness {btn && <RightArrow/>} </button>
       </div>
+      <Sidebar 
+        menuOpen={menuOpen}
+        toggle={toggleBtn}
+      />
     </div>
   )
 }
