@@ -108,6 +108,8 @@ const Button = styled.div`
     }
     button:hover{
         background-color: #e7e3e3;
+        transition: all 0.3s ease-in;
+
     }
 `
 const RightArrow = styled(ArrowRightAltIcon)`

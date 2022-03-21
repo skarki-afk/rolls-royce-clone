@@ -60,7 +60,7 @@ function App() {
   
   return (
     <Section>
-      <div className='hidden'>
+      <div>
         <Header 
           toggle ={toggleBtn}
           toggleDeal ={toggleDeal}
@@ -94,7 +94,8 @@ function App() {
 
 export default App;
 const Section = styled.div`
+  overflow: hidden;
 `
 const RightArrow = styled(ArrowRightAltIcon)`
-    margin-left: 2px;
+  margin-left: 2px;
 `

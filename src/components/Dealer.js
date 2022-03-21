@@ -41,8 +41,8 @@ const Section= styled.div`
     position:fixed;
     top:0;
     transform: ${props => props.show? "translateY(0)": "translateY(100%)"};
-    transition: transform 0.3s ease-in; 
-    overflow-y: hidden;
+    transition: all 0.3s ease-in; 
+    ;
 `
 const Nav = styled.div`
     height: 13vh;
@@ -57,6 +57,11 @@ const Nav = styled.div`
 const Close = styled(CloseIcon)`
     cursor: pointer;
     font-size: 1.2rem;
+    color: #fff;
+    &:hover{
+        transition: all 0.3s ease-in;
+        color:#adaaaa;
+    }
 `
 
 const Body = styled.div`
@@ -112,13 +117,17 @@ const Button = styled.div`
     .butn-search{
         background-color:#6d30a7;
         border: none;
-        
         text-align:center;
+        &:hover{
+            transition: all 0.3s ease-in;
+            background-color:#661cad;
+        }
     }
        
 `
 const RightArrow = styled(ArrowRightAltIcon)`
     margin-left: 2px;
+    
 `
 const Location = styled(LocationSearchingIcon)`
     margin-left:2px;

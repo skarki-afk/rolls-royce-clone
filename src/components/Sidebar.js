@@ -53,6 +53,7 @@ const Bar = styled.div`
         margin-bottom: 20px;
         &:hover{
             color:#fff;
+            transition: all 0.3s ease-in;
         }
     }
 `
