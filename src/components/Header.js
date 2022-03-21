@@ -83,6 +83,7 @@ const Menu = styled.div`
  cursor: pointer;
  &:hover{
     color:#e7e3e3;
+    transition: all 0.3s ease-in;
 }
 `
 const Logo =styled.div`
@@ -94,6 +95,7 @@ const RightMenu = styled.div`
     cursor: pointer;
     &:hover{
         color:#e7e3e3;
+        transition: all 0.3s ease-in;
     }
 `
 
