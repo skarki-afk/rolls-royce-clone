@@ -89,7 +89,7 @@ export default Footer;
 
   `
   const Button= styled.button`
-  margin-top: 125px;
+  margin-top: 155px;
   margin-bottom: 25px;
   display: flex;
   align-items: center;

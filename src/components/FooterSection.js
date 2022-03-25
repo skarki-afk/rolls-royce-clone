@@ -30,12 +30,15 @@ const Modal =styled.div`
         color: #e7e3e3;
     }
 
-    @media(max-width: 1180px){
-        height: 45vh;
+    @media(max-width: 1340px){
+        height: 105vh;
     }
 
     @media(max-width: 420px){
         height: 55vh;
+    }
+    @media(max-width: 750px){
+        height: 95vh;
     }
 
     @media(max-width: 400px){
@@ -55,7 +58,7 @@ const Modal =styled.div`
         @media(max-width: 1180px){
             width: 700px;
         }
-        @media(max-width: 420px){
+        @media(max-width: 750px){
             width: 350px;
         }
         @media(max-width: 400px){
@@ -77,7 +80,7 @@ const Modal =styled.div`
             font-size:1.5rem;
             height: 220px;
         }
-        @media(max-width: 420px){
+        @media(max-width: 750px){
             font-size: 0.8rem;
             height: 130px;
         }
@@ -90,7 +93,7 @@ const Modal =styled.div`
         @media(max-width: 1180px){
             width: 700px;
         }
-        @media(max-width: 420px){
+        @media(max-width: 750px){
             width: 390px;
         }
         @media(max-width: 400px){
