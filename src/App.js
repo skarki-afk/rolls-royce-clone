@@ -4,8 +4,6 @@ import Body from "./components/Body";
 import dataBody from "./data/dataBody"
 import Footer from "./components/Footer"
 import dataFooter from "./data/dataFooter"
-import FooterSection from './components/FooterSection';
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import styled from "styled-components"
 import Sidebar from './components/Sidebar';
 import Dealer from './components/Dealer';
@@ -41,41 +39,33 @@ function App() {
         h={items.h}
         btn={btn}
         showArrow={showArrow}
-        
       />
     )
   })
   // console.log(menuOpen)
   const footerElements = dataFooter.map(items=> {
     return( 
-      <FooterSection
+      <Footer
         key={items.id}
         title={items.title}
         description={items.description}
         img={items.img}
-
+        
       />
     )
   })
   
   return (
-    <Section>
-      <div>
-        <Header 
-          toggle ={toggleBtn}
-          toggleDeal ={toggleDeal}
-        />
-        {bodyElements}
-        <Footer/>
-        <div className='footer-list'>
-          <div className='list'>
-            {footerElements}
-          </div>
-          <button 
-          onMouseEnter={showArrow} 
-          onMouseLeave={showArrow}className='btn'>inspiring greatness {btn && <RightArrow/>} </button>
-        </div>
-      </div>
+    <Section>   
+      <Header 
+        toggle ={toggleBtn}
+        toggleDeal ={toggleDeal}
+      />
+      {bodyElements}
+      <Footer
+        showArrow={showArrow}
+        btn={btn}/>
+        
       <Sidebar 
         menuOpen={menuOpen}
         toggle={toggleBtn}
@@ -94,8 +84,5 @@ function App() {
 
 export default App;
 const Section = styled.div`
-  overflow: hidden;
-`
-const RightArrow = styled(ArrowRightAltIcon)`
-  margin-left: 2px;
+  
 `

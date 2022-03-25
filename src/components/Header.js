@@ -71,35 +71,62 @@ const Nav = styled.div`
         z-index: 1;
         color: white;
     }
+    @media (max-width: 420px){
+        .active {
+            width: 100vw;
+            margin:0 ;
+        }
+        .nav
+        {  margin:10px 7px};
+    }
     
-`
-
+    `
+    
 const BurgerMenu = styled(MenuIcon)`
     margin-right: 15px;
+    @media (max-width: 1080px) {  
+        font-size: 0.7rem;
+    }
+    
 `
 const Menu = styled.div`
- display: flex;
+display: flex;
  align-items: center;
  cursor: pointer;
  &:hover{
     color:#e7e3e3;
     transition: all 0.3s ease-in;
 }
+@media (max-width: 1080px) {  
+    font-size: 0.7rem;
+}
 `
 const Logo =styled.div`
-    cursor: pointer;
-    object-fit: contain;
+cursor: pointer;
+object-fit: contain;
 `
 const RightMenu = styled.div`
     display: flex;
+    align-items: center;
     cursor: pointer;
     &:hover{
         color:#e7e3e3;
         transition: all 0.3s ease-in;
     }
-`
+    @media (max-width: 1080px) {  
+        font-size: 0.7rem;
+        margin-right: 15px ;
+    }
+
+    @media (max-width: 650px) {  
+        margin-right: 20px ;
+    }
+    @media (max-width: 420px){
+        margin-right: 5px;
+    }
+    `
 
 const Search = styled(SearchIcon)`
     
-  }
+}
 `
