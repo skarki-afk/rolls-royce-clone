@@ -35,7 +35,8 @@ const Body=(props)=>{
             <Fade bottom>
                 <Button 
                 onMouseEnter={props.showArrow} 
-                onMouseLeave={props.showArrow}>
+                onMouseLeave={props.showArrow}
+                >
                     <button>{props.button} {props.btn && <RightArrow/>}</button>
                 </Button>
             </Fade>
@@ -73,6 +74,7 @@ const Section = styled.div`
     align-items:center;
     padding: 45px;
     text-transform: uppercase;
+    overflow-y: hidden;
     
 `
 const Main = styled.div`
@@ -83,11 +85,32 @@ const Main = styled.div`
         font-weight: 300;
         padding: 65px 0 15px 0;
         margin: 0 0 15px 0;
+        text-align: center;
     }
     p{
         color:#fff;
         text-align:center;
         padding:45px;
+    }
+    @media (max-width: 1080px) {  
+       h3{
+        font-size: 4.5rem;
+        } 
+    }
+    @media (max-width: 900px) {  
+        h3{
+         font-size: 3rem;
+         } 
+     }
+     @media (max-width: 630px) {  
+        h3{
+         font-size: 2rem;
+         } 
+     }
+     @media (max-width: 420px){
+       h3{
+           font-size: 1.6rem;
+       }
     }
 `
 const Button = styled.div`
@@ -111,6 +134,17 @@ const Button = styled.div`
         transition: all 0.3s ease-in;
 
     }
+    @media (max-width: 1080px) {  
+        h3{
+         font-size: 10px;
+         } 
+     }
+     @media (max-width: 900px) {  
+         h3{
+          font-size: 8px;
+          } 
+      }
+    
 `
 const RightArrow = styled(ArrowRightAltIcon)`
     margin-left: 2px;

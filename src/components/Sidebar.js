@@ -28,7 +28,7 @@ const Sidebar =(props)=>{
 export default Sidebar
 
 const Bar = styled.div`
-    z-index: 100;
+    z-index: ${props => props.show? 999: -1};;
     position:fixed;
     left:0;
     top:0;
@@ -43,6 +43,7 @@ const Bar = styled.div`
         display:flex;
         flex-direction: column;
         text-align: end;
+        align-items: flex-end; 
     }
     li{ 
         cursor: pointer;
@@ -54,6 +55,24 @@ const Bar = styled.div`
         &:hover{
             color:#fff;
             transition: all 0.3s ease-in;
+        }
+    }
+    @media (max-width: 1080px) {  
+        li{font-size: 1rem;}
+        ul{
+            margin-right: 60px;
+        }
+    @media (max-width: 720px) { 
+        width: 45vw; 
+        li{font-size: 0.8rem;}
+        ul{
+            margin-right: 40px;
+        }
+    @media (max-width: 720px) { 
+        width: 47vw; 
+        li{font-size: 0.6rem;}
+        ul{
+            margin-right: 30px;
         }
     }
 `

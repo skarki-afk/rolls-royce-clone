@@ -37,7 +37,7 @@ const Dealer=(props)=>{
 
 export default Dealer;
 const Section= styled.div`
-    z-index: 999;
+    z-index: ${props => props.show? 999: -1};
     position:fixed;
     top:0;
     transform: ${props => props.show? "translateY(0)": "translateY(100%)"};
@@ -68,10 +68,10 @@ const Body = styled.div`
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items:center;
+    align-items: center;
     height: 87vh;
     background-color: #281432;
-    padding: 45px;
+    padding: 45px 0;
     h3{
         margin:0;
         font-size: 2.5rem;
@@ -91,6 +91,30 @@ const Body = styled.div`
         width: 400px;
         border: none;
         outline: none;
+    }
+    @media (max-width: 420px){
+        margin: 
+        h3{
+            font-size: 2rem;
+        }
+        p{
+            width:340px;
+        }
+        input{
+            width: 330px;
+        }
+
+    }
+    @media (max-width: 400px){
+        h3{
+            font-size: 1.6rem;
+        }
+        p{
+            width:320px;
+        }
+        input{
+            width: 300px;
+        }
     }
 
 `
